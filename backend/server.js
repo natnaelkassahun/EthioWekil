@@ -19,9 +19,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use("/public", express.static('public'));
+app.use(express.static('public'));
 
-app.use('/items', require("./routes/itemRoutes"))
+app.use('api/items', require("./routes/itemRoutes"))
 //app.use('/payment', cors(), require("./routes/payment"))
 //app.get('/',(req,res) => res.send('server ready'));
 //cd backend
