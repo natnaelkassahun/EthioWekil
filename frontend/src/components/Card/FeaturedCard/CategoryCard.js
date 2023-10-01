@@ -13,6 +13,7 @@ const CategoryCard = (props) => {
                 <div className="category__card__detail">
                     <div className="product__name">
     
+    
                       
                            {props.data.name}
                        
