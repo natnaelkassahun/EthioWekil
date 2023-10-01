@@ -12,18 +12,18 @@ import FeaturedCategories from "../components/Featured/Categories/FeaturedCatego
 import { TabTitle } from "../utils/General";
 import React from 'react'
 
-
+async getData(){
+            const res = await fetch('https://ethio-wekil-backend.vercel.app/items');
+            const data = await res.json();
+            return data;
+}
 const Home = () => {
     const [ featuredItems, setFeaturedItems ] = useState()
     TabTitle("Home - EthioWekil");
 
     useEffect(() => {
-        axios.get("http://ethio-wekil-backend.vercel.app/items")
-            .then(res => setFeaturedItems(res.data))
-            .catch(err => console.log(err))
-
-
-        window.scrollTo(0, 0)
+         setFeaturedItems(getData());
+         window.scrollTo(0, 0)
     }, [])
 
     return ( 
