@@ -18,7 +18,8 @@ const Home = () => {
     TabTitle("Home - EthioWekil");
 
     useEffect(() => {
-        axios.get("http://ethio-wekil-backend.vercel.app/items")
+        axios.get("http://ethio-wekil-backend.vercel.app/items",{
+              headers: {'user-agent': 'not axios', }})
             .then(res => setFeaturedItems(res.data))
             .catch(err => console.log(err))
 
