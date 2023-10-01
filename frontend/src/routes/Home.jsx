@@ -20,13 +20,11 @@ const Home = () => {
 
     
     useEffect(() => {
-          const Data = async()=>{
-             const res = await fetch('https://ethio-wekil-backend.vercel.app/items');
-             const data = await res.json();
-             return data ;     
-          } 
-         setFeaturedItems(Data);
-         window.scrollTo(0, 0)
+        axios.get("https://shema-backend.vercel.app/api/items")
+            .then(res => setFeaturedItems(res.data))
+            .catch(err => console.log(err))
+
+        window.scrollTo(0, 0)
     }, [])
 
     return ( 
