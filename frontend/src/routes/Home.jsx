@@ -1,7 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import Landing from "../components/Landing/Landing";
-import fetch from 'node-fetch'
 
 
 import Design from "../components/Design/Design";
