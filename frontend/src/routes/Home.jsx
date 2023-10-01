@@ -19,7 +19,7 @@ const Home = () => {
 
     
     useEffect(() => {
-        axios.get("https://shema-backend.vercel.app/api/items")
+        axios.get("https://ethio-wekil-backend.vercel.app/api/items")
             .then(res => setFeaturedItems(res.data))
             .catch(err => console.log(err))
 
