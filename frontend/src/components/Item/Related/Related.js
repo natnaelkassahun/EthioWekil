@@ -13,7 +13,7 @@ const Related = (props) => {
     const [ constructionItems, setConstructionItems ] = useState()
 
     useEffect(() => {
-        axios.get("http://localhost:5001/items")
+        axios.get("https://ethio-wekil-backend.vercel.app/api/items")
             .then(res => {
                 setMenItems(res.data.filter((item) => item.category === "men"))
                 setKidsItems(res.data.filter((item) => item.category === "kids" ))
