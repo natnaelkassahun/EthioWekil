@@ -1,6 +1,7 @@
 import { Fragment, useEffect, useState } from "react";
 import axios from "axios";
 import Landing from "../components/Landing/Landing";
+import fetch from 'node-fetch'
 
 
 import Design from "../components/Design/Design";
@@ -12,16 +13,16 @@ import FeaturedCategories from "../components/Featured/Categories/FeaturedCatego
 import { TabTitle } from "../utils/General";
 import React from 'react'
 
-
-const Home = () => {
-    const [ featuredItems, setFeaturedItems ] = useState()
-    TabTitle("Home - EthioWekil");
-
-    const Data = async () => {
+async Data (){
           const res = await fetch('https://ethio-wekil-backend.vercel.app/items');
           const data = await res.json();
           return data ;     
     }
+const Home = () => {
+    const [ featuredItems, setFeaturedItems ] = useState()
+    TabTitle("Home - EthioWekil");
+
+    
     useEffect(() => {
          setFeaturedItems(Data);
          window.scrollTo(0, 0)
