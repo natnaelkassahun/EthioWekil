@@ -12,7 +12,7 @@ const ProductView = (props) => {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-        axios.get("http://localhost:5001/items")
+        axios.get("https://ethio-wekil-backend.vercel.app/items")
             .then(res => {
                 setItem(res.data.filter((item) => item._id === param.id))
                 setLoading(false)
