@@ -10,12 +10,12 @@ const ProductCarousel = (props) => {
           <Carousel variant="dark" interval={4000}>
             <Carousel.Item>
             <div className="carousel__image__container">
-                <img className="carousel__image" src={`http://localhost:5001/public/${data.item.category}/${data.item.image[0].filename}`} alt="item"/>
+                <img className="carousel__image" src={`https://ethio-wekil-backend.vercel.app/api/public/${data.item.category}/${data.item.image[0].filename}`} alt="item"/>
             </div>
             </Carousel.Item>  
             <Carousel.Item>
             <div className="carousel__image__container">
-                <img className="carousel__image" src={`http://localhost:5001/public/${data.item.category}/${data.item.image[1].filename}`} alt="item"/>
+                <img className="carousel__image" src={`https://ethio-wekil-backend.vercel.app/api/public/${data.item.category}/${data.item.image[1].filename}`} alt="item"/>
               </div>
             </Carousel.Item>   
            
