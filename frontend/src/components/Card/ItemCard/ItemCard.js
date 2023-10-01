@@ -32,7 +32,7 @@ const ItemCard = (props) => {
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
                 > 
-                {isHovered? <img src={`https://ethio-wekil-backend.vercel.app/api/public/${props.item.category}/${props.item.image[1].filename}`} alt="item" className="product__img"/>: <img src= {`https://ethio-wekil-backend.vercel.app/api/public/${props.item.category}/${props.item.image[0].filename}`} alt="item" className="product__img"/> }
+                {isHovered? <img src={`https://ethio-wekil-backend.vercel.app/public/${props.item.category}/${props.item.image[1].filename}`} alt="item" className="product__img"/>: <img src= {`https://ethio-wekil-backend.vercel.app/public/${props.item.category}/${props.item.image[0].filename}`} alt="item" className="product__img"/> }
                 </div>
                 
                 <div className="product__card__detail">
