@@ -19,7 +19,7 @@ const Home = () => {
 
     useEffect(() => {
         axios.get("http://ethio-wekil-backend.vercel.app/items")
-            .then(console.log("JSON data from API ==>", res.data);)
+            .then(res => setFeaturedItems(res.data))
             .catch(err => console.log(err))
 
 
