@@ -9,6 +9,7 @@ const CategoryCard = (props) => {
                 <div className="category__image"> 
                    <img src= {props.data.image} alt="" className="product__img"/> 
                 </div>
+    
                 <div className="category__card__detail">
                     <div className="product__name">
                       
