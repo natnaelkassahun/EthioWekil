@@ -21,9 +21,9 @@ const Shop = () => {
     useEffect(() => {
         axios.get("https://ethio-wekil-backend.vercel.app/api/items")
             .then(res => {
-                //setMenItems(res.data.filter((item) => item.category === "men"))
-                //setKidsItems(res.data.filter((item) => item.category === "kids" ))
-                //setWomenItems(res.data.filter((item) => item.category === "women"))
+                setMenItems(res.data.filter((item) => item.category === "men"))
+                setKidsItems(res.data.filter((item) => item.category === "kids" ))
+                setWomenItems(res.data.filter((item) => item.category === "women"))
                 setConstructionItems(res.data.filter((item) => item.category === "construction"))
                 setFurnitureItems(res.data.filter((item) => item.category === "furniture"))
                 setElectronicItems(res.data.filter((item) => item.category === "electronics"))
