@@ -8,7 +8,8 @@ const NavBrand = () => {
     return ( 
         <div href="#home" className='navbrand__container'>
            <h1 className='navbrand'>
-               <Link to="/"><h1 ><Text tid="exploreHeader" /></h1></Link>
+               <span className="text-wrapper"><Text tid="exploreHeader" /></span>
+               <span className="span"><Text tid="exploreHeader2" /></span>
             </h1>
         </div>
      );
