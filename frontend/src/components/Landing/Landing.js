@@ -33,14 +33,14 @@ const Landing = () => {
           </div>
           <img className="logo" alt="Logo" src={land_en}/>
           <button className="button">
-            <div className="text-wrapper-9">SHOP NOW</div>
+            <div className="text-wrapper-9">{languageContext.dictionary["shop now"]}</div>
           </button>
         </div>
         <button className="div-wrapper">
-          <div className="text-wrapper-9">SHOP NOW</div>
+          <div className="text-wrapper-9">{languageContext.dictionary["shop now"]}</div>
         </button>
         <button className="button-2">
-          <div className="text-wrapper-9">SHOP NOW</div>
+          <div className="text-wrapper-9">{languageContext.dictionary["shop now"]}</div>
         </button>
       </div>
      );
