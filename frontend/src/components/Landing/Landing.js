@@ -3,10 +3,13 @@ import './Landing.css'
 import { Link } from "react-router-dom"
 import { Button } from "@mui/material";
 import React from 'react'
-import land_en from '../../asset/brand/logo_en.png';
+import land_en from "../../asset/brand/logo2.png"
 import land_am from '../../asset/brand/logo_am.png';
 import { Text, LanguageContext } from '../../languages/Language';
 import { useContext } from 'react';
+import furniture from "../../asset/brand/furniture.jpg"
+import tv from "../../asset/brand/tv.jpg"
+import const2 from "../../asset/brand/const.jpg"
 
 
 
@@ -14,23 +17,32 @@ const Landing = () => {
     const languageContext = useContext(LanguageContext);
 
     return (
-         
-        <div className="landing__container">
-            <div className="landing__header__container">
-                <div className="landing__header">
-                    <h3 className="landing__header__discount">{languageContext.dictionary["landing_header_1"]}</h3>
-                    <h2 className="landing__header__main">{languageContext.dictionary["landing_header_2"]}</h2>
-                    <h2 className="landing__header__main">{languageContext.dictionary["landing_header_3"]}</h2>
-                    <Link to="/shop">
-                        <Button variant='outlined' sx={[ {width: '190px', height: '50px', borderRadius: '20px' , fontWeight: '700', backgroundColor: 'none', borderColor: 'black', color: 'black' }, {'&:hover': {  backgroundColor: "black" , color: "#FFE26E", borderColor: 'black'}}]}>{languageContext.dictionary["shop now"]}</Button>
-                    </Link>
-                </div>
+     
+        <div className="overlap-2">
+        <div className="overlap-3">
+          <div className="section-content">
+            <img className="rectangle-4" alt="Rectangle" src={const2} />
+            <img className="rectangle-5" alt="Rectangle" src={furniture} />
+            <img className="rectangle-6" alt="Rectangle" src={tv} />
+            <div className="checkout-the-best">
+              Checkout The
+              <br />
+              Best Product
             </div>
-            <div className="landing__image__container">
-                {languageContext.dictionary["landingImg"] == "en_IMG" ? <img className="landing__image;float: right;" src={land_en} alt=""/>: <img className="landing__image;float: right;" src={land_am} alt=""/>}
-                
-            </div>
+            <p className="p">Same Price All Over Ethiopia</p>
+          </div>
+          <img className="logo" alt="Logo" src={land_en}/>
+          <button className="button">
+            <div className="text-wrapper-9">SHOP NOW</div>
+          </button>
         </div>
+        <button className="div-wrapper">
+          <div className="text-wrapper-9">SHOP NOW</div>
+        </button>
+        <button className="button-2">
+          <div className="text-wrapper-9">SHOP NOW</div>
+        </button>
+      </div>
      );
 }
  
