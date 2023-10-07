@@ -25,11 +25,11 @@ const Landing = () => {
             <img className="rectangle-5" alt="Rectangle" src={furniture} />
             <img className="rectangle-6" alt="Rectangle" src={tv} />
             <div className="checkout-the-best">
-              Checkout The
+              {languageContext.dictionary["landing_header_2"]}
               <br />
-              Best Product
+              {languageContext.dictionary["landing_header_3"]}
             </div>
-            <p className="p">Same Price All Over Ethiopia</p>
+            <p className="p">{languageContext.dictionary["landing_header_1"]}</p>
           </div>
           <img className="logo" alt="Logo" src={land_en}/>
           <button className="button">
